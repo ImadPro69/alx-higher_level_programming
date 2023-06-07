@@ -7,4 +7,4 @@ def uppercase(s):
         if ord('a') <= ascii_val <= ord('z'):
             ascii_val -= 32
         result += chr(ascii_val)
-    print(result)
+    print("{}".format(result))
