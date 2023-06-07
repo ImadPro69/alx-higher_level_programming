@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-for tens_digit in range(10):
-    for ones_digit in range(tens_digit + 1, 10):
-        if tens_digit != ones_digit:
-            if tens_digit != 8 or ones_digit != 9:
-                print("{:d}{:d}, ".format(tens_digit, ones_digit), end='')
-            else:
-                print("{:d}{:d}".format(tens_digit, ones_digit))
-
-print()
+for i in range(10):
+    for j in range(i + 1, 10):
+        print("{:d}{:d}".format(i, j), end="")
+        if i != 8 or j != 9:
+            print(", ", end="")
+        else:
+            print()
