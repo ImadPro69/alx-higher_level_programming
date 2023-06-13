@@ -1,82 +1,75 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * is_palindrome - checks if a singly linked list is a palindrome
- * @head: double pointer to the head of the linked list
- * Return: 0 if not a palindrome, 1 if a palindrome
+ * reverse_listint - Reverses a linked list
+ * @head: Pointer to pointer to the head of the list
+ *
+ * Return: Pointer to the new head of the reversed list
+ */
+listint_t *reverse_listint(listint_t **head)
+{
+    listint_t *prev = NULL;
+    listint_t *next = NULL;
+
+    while (*head != NULL)
+    {
+        next = (*head)->next;
+        (*head)->next = prev;
+        prev = *head;
+        *head = next;
+    }
+
+    *head = prev;
+    return (*head);
+}
+
+/**
+ * is_palindrome - Checks if a linked list is a palindrome
+ * @head: Pointer to pointer to the head of the list
+ *
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow, *fast, *prev_slow = NULL, *mid_node = NULL;
-	listint_t *second_half, *prev_of_slow = NULL;
-	int is_palindrome = 1;
+    listint_t *slow = *head;
+    listint_t *fast = *head;
+    listint_t *prev = NULL;
+    listint_t *second_half = NULL;
+    int palindrome = 1;
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (is_palindrome);
+    if (*head != NULL && (*head)->next != NULL)
+    {
+        while (fast != NULL && fast->next != NULL)
+        {
+            fast = fast->next->next;
+            prev = slow;
+            slow = slow->next;
+        }
 
-	slow = *head;
-	fast = *head;
+        if (fast != NULL)
+        {
+            slow = slow->next;
+        }
 
-	/* Find the middle node of the linked list */
-	while (fast != NULL && fast->next != NULL)
-	{
-		fast = fast->next->next;
-		prev_slow = slow;
-		slow = slow->next;
-	}
+        second_half = reverse_listint(&slow);
 
-	/* Handle odd length list */
-	if (fast != NULL)
-	{
-		mid_node = slow;
-		slow = slow->next;
-	}
+        while (second_half != NULL)
+        {
+            if ((*head)->n != second_half->n)
+            {
+                palindrome = 0;
+                break;
+            }
 
-	second_half = slow;
-	prev_slow->next = NULL; /* Split the list into two halves */
+            *head = (*head)->next;
+            second_half = second_half->next;
+        }
 
-	/* Reverse the second half of the linked list */
-	while (second_half != NULL)
-	{
-		listint_t *next_node = second_half->next;
-		second_half->next = prev_of_slow;
-		prev_of_slow = second_half;
-		second_half = next_node;
-	}
+        reverse_listint(&slow);
+        prev->next = slow;
+    }
 
-	/* Compare the first half and the reversed second half */
-	while (prev_of_slow != NULL)
-	{
-		if ((*head)->n != prev_of_slow->n)
-		{
-			is_palindrome = 0;
-			break;
-		}
-		*head = (*head)->next;
-		prev_of_slow = prev_of_slow->next;
-	}
-
-	/* Restore the original linked list */
-	second_half = prev_of_slow;
-	prev_of_slow = NULL;
-
-	/* Reverse the reversed second half back to the original order */
-	while (second_half != NULL)
-	{
-		listint_t *next_node = second_half->next;
-		second_half->next = prev_of_slow;
-		prev_of_slow = second_half;
-		second_half = next_node;
-	}
-
-	/* If the list had odd length, reconnect the middle node */
-	if (mid_node != NULL)
-	{
-		prev_slow->next = mid_node;
-		mid_node->next = prev_of_slow;
-	}
-	else
-		prev_slow->next = prev_of_slow;
-
-	return (is_palindrome);
+    return palindrome;
 }
