@@ -41,7 +41,7 @@ void print_python_bytes(PyObject *p)
 
     printf("  first %ld bytes:", size < 10 ? size + 1 : 10);
     for (i = 0; i <= size && i < 10; i++)
-        printf(" %02x", bytes->ob_sval[i]);
+        printf(" %02hhx", bytes->ob_sval[i]);
     printf("\n");
 }
 
@@ -50,6 +50,15 @@ void print_python_float(PyObject *p)
     PyFloatObject *float_obj = (PyFloatObject *)p;
     double value = float_obj->ob_fval;
 
-    printf("[.] float object info\n");
-    printf("  value: %f\n", value);
+    if (PyFloat_Check(p))
+    {
+        printf("[.] float object info\n");
+        printf("  value: %.17g\n", value);
+    }
+    else
+    {
+        printf("[.] float object info\n");
+        printf("  [ERROR] Invalid Float Object\n");
+    }
 }
+
