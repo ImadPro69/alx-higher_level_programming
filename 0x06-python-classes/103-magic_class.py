@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Define a MagicClass matching exactly a bytecode provided"""
+"""This MagicClass implementation corresponds to a specific bytecode provided."""
 
 import math
 
 class MagicClass:
-    """Represent a circle."""
+    """A Circle"""
     def __init__(self, radius=0):
         if not isinstance(radius, (int, float)):
             raise TypeError("radius must be a number")
