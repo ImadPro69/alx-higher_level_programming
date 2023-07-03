@@ -1,26 +1,24 @@
 #!/usr/bin/python3
-"""Compare rectangles"""
-
-
+"""Compare Rectangles"""
 class Rectangle:
-    """Defines a rectangle"""
+    """Defines a Rectangle"""
     number_of_instances = 0
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """Initialize the data"""
+        """Initialize The Data"""
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """Retrieves the width"""
+        """Retrieves the Width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width to a value"""
+        """Sets the width to a Value"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -29,12 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the position"""
+        """Retrieves the Position"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height to a value"""
+        """Sets the height to a Value"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
