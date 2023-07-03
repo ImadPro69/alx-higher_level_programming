@@ -1,23 +1,20 @@
 #!/usr/bin/python3
-
-'''Here we learn more about Classes and Objects'''
-
-
+'''Here We Learn More About Classes and Objects'''
 class Rectangle:
     '''Class Rectangle'''
     def __init__(self, width=0, height=0):
-        '''Initializing atributes'''
+        '''Initializing Atributes'''
         self.height = height
         self.width = width
 
     @property
     def width(self):
-        '''Getting the value of width'''
+        '''Getting The Value Of Width'''
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''Setting the value of width'''
+        '''Setting The Value Of Width'''
         if not type(value) is int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +23,12 @@ class Rectangle:
 
     @property
     def height(self):
-        '''Getting the value of height'''
+        '''Getting The Value Of Height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''Setting the value of height'''
+        '''Setting The Value Of Height'''
         if not type(value) is int:
             raise TypeError("height must be an integer")
         if value < 0:
