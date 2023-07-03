@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-'''Here we learn more about Classes and Objects'''
-
-
+'''Here We Learn More About Classes And Objects'''
 class Rectangle:
     '''Class Rectangle'''
     def __init__(self, width=0, height=0):
@@ -12,12 +9,12 @@ class Rectangle:
 
     @property
     def width(self):
-        '''Getting the value of width'''
+        '''Getting The Value Of Width'''
         return self.__width
 
     @width.setter
     def width(self, value):
-        '''Setting the value of width'''
+        '''Setting The Value Of Width'''
         if not type(value) is int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +23,12 @@ class Rectangle:
 
     @property
     def height(self):
-        '''Getting the value of height'''
+        '''Getting The Value Of Height'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        '''Setting the value of height'''
+        '''Setting The Value Of Height'''
         if not type(value) is int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -39,11 +36,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        '''Defining a method to get the area of the Rectangle'''
+        '''Defining a Method To Get The Area Of The Rectangle'''
         return (self.height * self.width)
 
     def perimeter(self):
-        '''Defining a method to get the perimeter of the Rectangle'''
+        '''Defining a Method To Get The Perimeter Of The Rectangle'''
         if self.height == 0 or self.width == 0:
             return 0
         return ((self.height + self.width) * 2)
