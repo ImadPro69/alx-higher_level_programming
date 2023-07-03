@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
+'''Here we learn more about Classes and Objects'''
 class Rectangle:
+    '''Class Rectangle'''
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
