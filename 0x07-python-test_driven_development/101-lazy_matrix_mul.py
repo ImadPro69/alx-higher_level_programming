@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Module to multiply two matrices using NumPy
-"""
+"""Module tommultiply two Matrices Using NumPy"""
 import numpy as np
 
 

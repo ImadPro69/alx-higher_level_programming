@@ -5,7 +5,7 @@ def text_indentation(text):
     Prints a text with 2 new lines after each occurrence of '.', '?', and ':' characters.
 
     Args:
-        text (str): The text to be indented.
+        text (str): The Text To Be Indented.
 
     Raises:
         TypeError: If text is not a string.

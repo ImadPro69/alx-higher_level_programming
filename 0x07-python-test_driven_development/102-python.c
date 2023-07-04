@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_python_string - Prints information about a Python string object
+ * print_python_string - Prints Information About a Python StringOObject
  * @p: Pointer to the Python object
  */
 void print_python_string(PyObject *p)
