@@ -3,12 +3,12 @@
 
 
 def text_indentation(text):
-    """Print text with two new lines after each '.', '?', and ':'.
+    """Print text With two new lines after each '.', '?', and ':'.
 
     Args:
-        text (string): The text to print.
+        text (string): The Text to print.
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If text is Not a string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
