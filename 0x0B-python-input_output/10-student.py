@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a class Student."""
+""" 10. Student to JSON with filter """
 
 
 class Student:
