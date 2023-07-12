@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Pascal's Triangle function."""
+""" 12. Pascal's Triangle """
 
 
 def pascal_triangle(n):
