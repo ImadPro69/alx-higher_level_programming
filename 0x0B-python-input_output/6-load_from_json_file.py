@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a JSON file-reading function."""
+""" 6. Create object from a JSON file """
 import json
 
 
