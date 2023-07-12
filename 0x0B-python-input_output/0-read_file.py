@@ -14,8 +14,3 @@ def read_file(filename=""):
     with open(filename, 'r', encoding='utf-8') as file:
         contents = file.read()
         print(contents, end='')
-
-
-if __name__ == "__main__":
-    read_file()
-
