@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a file-appending function."""
+"""2. Append to a file """
 
 
 def append_write(filename="", text=""):
