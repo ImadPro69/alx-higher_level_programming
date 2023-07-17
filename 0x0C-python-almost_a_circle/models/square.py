@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-"""Defines a square class."""
+"""Defines a Square class."""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square."""
+    """Represent a Square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a new Square.
+        """Initialize a New Square.
 
         Args:
-            size (int): The size of the new Square.
-            x (int): The x coordinate of the new Square.
-            y (int): The y coordinate of the new Square.
-            id (int): The identity of the new Square.
+            size (int): The size Of the new Square.
+            x (int): The x coordinate Of the new Square.
+            y (int): The y coordinate Of the new Square.
+            id (int): The identity Of the new Square.
         """
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Get/set the size of the Square."""
+        """Get/set the size Of the Square."""
         return self.width
 
     @size.setter
@@ -32,11 +32,11 @@ class Square(Rectangle):
 
         Args:
             *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents size attribute
-                - 3rd argument represents x attribute
-                - 4th argument represents y attribute
-            **kwargs (dict): New key/value pairs of attributes.
+                - 1st argument Represents id attribute
+                - 2nd argument Represents size attribute
+                - 3rd argument Represents x attribute
+                - 4th argument Represents y attribute
+            **kwargs (dict): New key/value Pairs of attributes.
         """
         if args and len(args) != 0:
             a = 0
@@ -69,7 +69,7 @@ class Square(Rectangle):
                     self.y = v
 
     def to_dictionary(self):
-        """Return the dictionary representation of the Square."""
+        """Return the dictionary Representation of the Square."""
         return {
             "id": self.id,
             "size": self.width,
@@ -78,6 +78,6 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """Return the print() and str() representation of a Square."""
+        """Return the print() and str() Representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
