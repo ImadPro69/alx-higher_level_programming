@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-'''Prints all rows in the states table of a database \
-with a name that matches the given argument and \
+'''
+Prints All rows in the states table of a database \
+with a name that matches the given Argument and \
 is safe from SQL injection.
 '''
 import sys
