@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints the id of a State object with a given name in a database.
+'''
+Prints the id of a State object with a given Name in a database.
 '''
 import sys
 from sqlalchemy import create_engine
