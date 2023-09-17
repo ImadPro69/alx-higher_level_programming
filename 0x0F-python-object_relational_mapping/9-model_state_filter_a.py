@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints all State objects with a name that contains 'a' in a database.
+'''
+Prints all State objects with a Name that contains 'a' in a database.
 '''
 import sys
 from sqlalchemy import create_engine
