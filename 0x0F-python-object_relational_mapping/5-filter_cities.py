@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints all cities of a given state in a database.
+'''
+Prints all cities Of A given state in a database.
 '''
 import sys
 import MySQLdb
