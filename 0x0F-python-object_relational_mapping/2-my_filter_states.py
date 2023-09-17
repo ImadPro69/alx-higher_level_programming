@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints all rows in the states table of a database
+'''
+Prints all rows in the states table of a Database
 with a name that matches the given argument.
 '''
 import sys
