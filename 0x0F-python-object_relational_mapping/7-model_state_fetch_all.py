@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints all State objects in a database.
+'''
+Prints All State objects in a Database.
 '''
 import sys
 from sqlalchemy import create_engine
