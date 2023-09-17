@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Adds a State object and one of its City object children to a database.
+'''
+Adds a State object and one of its City Object children to a database.
 '''
 import sys
 from sqlalchemy import create_engine
