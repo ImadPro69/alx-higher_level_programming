@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Prints all City objects and their State in a database.
+'''
+Prints all City objects And their State in a database.
 '''
 import sys
 from sqlalchemy import create_engine
