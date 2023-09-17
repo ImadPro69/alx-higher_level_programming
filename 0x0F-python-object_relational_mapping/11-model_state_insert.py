@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Adds a State object to a database.
+'''
+Adds a State object To a database.
 '''
 import sys
 from sqlalchemy import create_engine
