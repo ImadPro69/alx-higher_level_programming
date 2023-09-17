@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Deletes all State objects with 'a' in its name in a database.
+'''
+Deletes all State objects with 'a' in its Name in a database.
 '''
 import sys
 from sqlalchemy import create_engine
