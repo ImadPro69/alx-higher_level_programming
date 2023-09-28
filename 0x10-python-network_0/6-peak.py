@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Algorithms for list of integers."""
+"""Hmm"""
 
 
 def find_peak(list_of_integers):
