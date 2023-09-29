@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fetches a header of a response from a URL."""
+"""Hi"""
 import sys
 from urllib import request
 
