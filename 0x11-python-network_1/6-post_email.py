@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Sends a form data to a URL."""
+"""Hi"""
 import sys
 import requests
 
