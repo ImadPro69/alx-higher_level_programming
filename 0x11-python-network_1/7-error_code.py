@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Sends a request to a URL and prints its response or error code."""
+"""Hi"""
 import sys
 import requests
 
